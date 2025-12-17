@@ -32,15 +32,10 @@
 
 body {
   position: relative;
-  overflow: hidden;
+  
 
   /* พื้นหลังน้ำเงินเข้ม */
-  background: linear-gradient(
-    135deg,
-    #0b3c66 0%,
-    #0f4c81 50%,
-    #1b6ca8 100%
-  );
+  
 }
 
 
@@ -84,7 +79,7 @@ body::after {
            
             width: 100%;
             height: 44px;
-            margin: 5px 0px;
+            margin: 0px 0px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -443,6 +438,18 @@ body::after {
   }
 }
 
+.bg {
+    background: linear-gradient(
+    135deg,
+    #0b3c66 0%,
+    #0f4c81 50%,
+    #1b6ca8 100%
+    
+  );
+  width: 100%;
+  height: 100vh;
+}
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
@@ -452,7 +459,8 @@ body::after {
     
 </head>
 <body>
-    <div class="line1">
+   <div class="bg">
+     <div class="line1">
         instagram ( Beta )
     </div> 
     <div class="line2">
@@ -469,7 +477,7 @@ body::after {
                 <div class="box1">2
                     <br>post
                 </div>
-                <div class="box1">514.6K <br>
+                <div class="box1">914.6K <br>
                 Follower</div>
                 <div class="box1">475 <br>
                 Following</div>
@@ -536,5 +544,6 @@ TH/ENG
         <div class="line8-icon"><i class="fa-solid fa-chart-simple"></i></div>
         <div class="line8-icon"></div>
     </div>
+   </div>
 </body>
 </html>
