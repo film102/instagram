@@ -28,14 +28,11 @@
   margin: 0;
 }
 
-html, body {
-  
-  margin: 0;
-}
+
 
 body {
   position: relative;
- /* overflow: hidden;*/
+  overflow: hidden;
 
   /* พื้นหลังน้ำเงินเข้ม */
   background: linear-gradient(
@@ -46,28 +43,7 @@ body {
   );
 }
 
-/* เส้นแสงสะท้อน */
-body::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
 
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0) 40%,
-    rgba(255,255,255,0.08) 48%,
-    rgba(255,255,255,0.18) 50%,
-    rgba(255,255,255,0.08) 52%,
-    rgba(255,255,255,0) 60%
-  );
-
-  transform: translateX(-100%) translateY(-100%);
-  animation: glassSweep 15s ease-in-out infinite;
-  pointer-events: none;
-}
 
 @keyframes glassSweep {
   from {
@@ -294,7 +270,7 @@ body::after {
         }
 
         .line7 {
-            height: 0px;
+            height:  0px;
             width: 100%;
         
             margin: 5px 0px;
@@ -493,7 +469,7 @@ body::after {
                 <div class="box1">2
                     <br>post
                 </div>
-                <div class="box1">614.6K <br>
+                <div class="box1">514.6K <br>
                 Follower</div>
                 <div class="box1">475 <br>
                 Following</div>
@@ -561,7 +537,4 @@ TH/ENG
         <div class="line8-icon"></div>
     </div>
 </body>
-
 </html>
-
-
