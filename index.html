@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style type="text/css">
+         *  {
+            
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 450;
+    text-shadow: 1px 1px 10px #000;
+
+            font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+            
+        }
+
+    html, body {
+  height: 100%;
+  margin: 0;
+}
+
+html, body {
+  
+  margin: 0;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+
+  /* พื้นหลังน้ำเงินเข้ม */
+  background: linear-gradient(
+    135deg,
+    #0b3c66 0%,
+    #0f4c81 50%,
+    #1b6ca8 100%
+  );
+}
+
+/* เส้นแสงสะท้อน */
+body::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0) 40%,
+    rgba(255,255,255,0.08) 48%,
+    rgba(255,255,255,0.18) 50%,
+    rgba(255,255,255,0.08) 52%,
+    rgba(255,255,255,0) 60%
+  );
+
+  transform: translateX(-100%) translateY(-100%);
+  animation: glassSweep 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes glassSweep {
+  from {
+    transform: translateX(-80%) translateY(-80%);
+  }
+  to {
+    transform: translateX(80%) translateY(80%);
+  }
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0) 45%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0) 55%
+  );
+  animation: glassSweep 7s linear infinite;
+  pointer-events: none;
+}
+
+body::after {
+  animation-delay: 8s; /* 👈 โผล่มากลางทาง */
+}
+
+
+
+
+
+
+
+
+        .line1 {
+           
+            width: 100%;
+            height: 44px;
+            margin: 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 0.5px solid #fff;
+        }
+
+        .line2 {
+            
+            width: 100%;
+            height: 112px;
+            margin: 0px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 0px 30px;
+        }
+
+        .line3 {
+            
+            width: 100%;
+            height: 180px;
+            margin: 0px 0px;
+            padding: 0px 30px;
+            font-size: 14px;
+        }
+
+        .line4 {
+           
+            width: 100%;
+            height: 56px;
+            margin: 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .followbox {
+            width: 37%;
+            height: 35px;
+            background-color: rgb(22, 22, 14);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             box-shadow: 3px 3px 30px #000;
+        }
+
+        .messbox {
+            width: 37%;
+            height: 35px;
+           background-color: rgb(22, 22, 14);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             box-shadow: 3px 3px 30px #000;
+        }
+
+        .addbox {
+            width: 10%;
+            height: 35px;
+            background-color: rgb(22, 22, 14);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             box-shadow: 3px 3px 30px #000;
+        }
+
+        .line5 {
+            height: 95px;
+            width: 100%;
+            padding: 0px 0px 0px 25px;
+            margin: 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+
+        /*.hi1 {
+            width: 65px;
+            height: 65px;
+            background-color: #fff;
+            border-radius: 100px;
+            margin: 0px 9px;
+        }*/
+
+        .stoty-ring2 {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  padding: 3px;
+  box-sizing: border-box;
+  margin: 0px 10px;
+}
+
+/* วงเทาวิ่ง */
+.stoty-ring2.viewed::before {
+  content: "";
+  position: absolute;
+  inset: -1px;              /* แสงฟุ้งออกนอกวง */
+  border-radius: 50%;
+
+  background: conic-gradient(
+    rgba(68, 214, 224, 0)   0deg,     /* ช่องขาดนิดเดียว */
+    rgba(180,180,180,0.6) 30deg,
+    rgba(65, 29, 224, 0.9) 330deg,   /* 🔥 วิ่งยาว ~90% */
+    rgba(64, 179, 255, 0.3) 350deg,
+    rgba(57, 87, 221, 0.733)   360deg
+  );
+
+  filter: blur(8px);
+  opacity: 0.5;
+
+  animation: viewedRotate 3s linear infinite;
+  z-index: -1;
+}
+
+/* หมุน */
+@keyframes viewedRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* วงขาวคั่น */
+.white-gap2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #33526b;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+/* รูป */
+.hi1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+   background-size: cover;
+    background-position: center;
+    box-shadow: 3px 3px 50px #000;
+}
+
+#pic1 {
+    background-image: url('https://tse4.mm.bing.net/th/id/OIP.07bQtDC3r4ywCaHUljsVpAHaGL?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3');
+   }
+
+   #pic2 {
+    background-image: url('https://i.pinimg.com/736x/3b/38/fc/3b38fca9d539fd45488a8de87aeb8604.jpg')}
+
+     #pic3 {
+    background-image: url('https://i.pinimg.com/736x/ae/33/fd/ae33fdf41827d57c6405250c5d2ab78a.jpg')}
+
+     #pic4 {
+    background-image: url('https://i.pinimg.com/736x/aa/1c/35/aa1c359c7fbf0e9b765612e9f42c4704.jpg')}
+
+     #pic5 {
+    background-image: url('https://i.pinimg.com/736x/5c/a6/4f/5ca64f4fdee81a0e01b45290b362ef94.jpg')}
+
+
+
+        .line6 {
+            height: 56px;
+            width: 100%;
+            
+            margin: 5px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box-line6 {
+            width: 30.12%;
+            height: 44px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .line7 {
+            height: 3560px;
+            width: 100%;
+        
+            margin: 5px 0px;
+        }
+
+        .line8 {
+            height: 50px;
+            width: 100%;
+            
+           justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            border-top:1px solid #ffffff ;
+        }
+
+        .line8-icon {
+            height: 100%;
+            width: 13.20%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .line2-left-box {
+            
+            height: 100px;
+            width: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pic {
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.pinimg.com/736x/52/81/c1/5281c1c56fedec139bc72742e341f187.jpg');
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .line2-right-box {
+            width: 300px;
+            height: 80px;
+           
+        }
+
+        .line2-right-box-top {
+            width: 100%;
+            height: 30px;
+            padding-left: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .line2-right-box-bottom {
+            width: 100%;
+            height: 50px;
+           
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .box1 {
+            width: 75px;
+            height: 40px;
+           text-align: center;
+        }
+
+        #she {
+            color: rgb(126, 127, 128);
+        }
+
+        #pv {
+            color: rgb(78, 140, 199);
+        }
+
+        .verifed {
+            background-color: none;
+            width: 15px;
+            height: 15px;
+            background-image: url('https://thecloutmagazine.com/wp-content/uploads/2021/09/Legitly-Verified-Blue-Badge-top-page.png');
+            background-size: cover;
+            background-position: center;
+            margin-left: 10px;
+
+        }
+
+        #vr {
+            display: flex;
+            padding-left: 10px;
+            align-items: center;
+        }
+
+        .story-ring {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+
+  /* วงแหวนแบบ IG */
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+
+  padding: 3px; /* ระยะห่างระหว่างกรอบกับรูป */
+  box-sizing: border-box;
+}
+
+.white-gap {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 3px;          /* 👈 ความหนาของเส้นขาว */
+  background: #000000;     /* 👈 สีขาว */
+  box-sizing: border-box;
+}
+
+/*.story-ring.glow {
+  box-shadow:
+    0 0 8px rgba(214,41,118,0.6),
+    0 0 16px rgba(214,41,118,0.4),
+    0 0 30px rgba(214,41,118,0.25);
+}*/
+
+.story-ring {
+  position: relative;
+}
+
+/* วงเรืองแสงหมุน */
+.story-ring.glow::before {
+  content: "";
+  position: absolute;
+  inset: -7px; /* ระยะฟุ้งออกนอกวง */
+  border-radius: 50%;
+
+  /* แสงแบบ IG */
+  background: conic-gradient(
+    rgba(214,41,118,0) 0deg,
+    rgba(214,41,118,0.0) 20deg,
+    rgba(214,41,118,0.9) 320deg,
+    rgba(214,41,118,0.6) 350deg,
+    rgba(214,41,118,0.0) 357deg,
+    rgba(214,41,118,0) 360deg
+  );
+
+  filter: blur(4px);
+  opacity: 0.9;
+
+  animation: glowRotate 4s linear infinite;
+  z-index: -1;
+}
+
+/* หมุนแบบละมุน */
+@keyframes glowRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    <div class="line1">
+        instagram ( Beta )
+    </div> 
+    <div class="line2">
+        <div class="line2-left-box">
+            <div class="story-ring glow">
+                <div class="white-gap">
+                    <div class="pic"></div>
+                </div>
+            </div>
+        </div>
+        <div class="line2-right-box">
+            <div class="line2-right-box-top">Xzerxindie_  </div>
+            <div class="line2-right-box-bottom">
+                <div class="box1">2
+                    <br>post
+                </div>
+                <div class="box1">714.6K <br>
+                Follower</div>
+                <div class="box1">475 <br>
+                Following</div>
+            </div>
+        </div>
+    </div> 
+    <div class="line3">
+        <pre><span id="vr">! モスバーガー <div class="verifed"></div>  <span id="she">  She/her</span></span><span id="pv">@pv.wannyxz_ 🔒</span>
+Warehouse Unit Head 📦 ( informal )
+Mysterious Person 🕵️
+Introvert/ isfj 🫥
+TH/ENG
+
+-----------------------------------------------
+  My-Angel Baby-Boat
+        </pre>
+    </div> 
+    <div class="line4">
+        <div class="followbox">Follow</div>
+        <div class="messbox">Message</div>
+        <div class="addbox">+</div>
+    </div> 
+    <div class="line5">
+
+        <div class="stoty-ring2 viewed">
+            <div class="white-gap2">
+                <div class="hi1" id="pic1"></div>
+            </div>
+        </div>
+
+         <div class="stoty-ring2 viewed">
+            <div class="white-gap2">
+                <div class="hi1" id="pic2"></div>
+            </div>
+        </div>
+
+         <div class="stoty-ring2 viewed">
+            <div class="white-gap2">
+                <div class="hi1" id="pic3"></div>
+            </div>
+        </div>
+
+         <div class="stoty-ring2 viewed">
+            <div class="white-gap2">
+                <div class="hi1" id="pic4"></div>
+            </div>
+        </div>
+
+         
+       
+    </div> 
+    <div class="line6">
+        <div class="box-line6"><i class="fa-solid fa-table-cells"></i></div>
+        <div class="box-line6"><i class="fa-solid fa-repeat"></i></div>
+        <div class="box-line6"><i class="fa-regular fa-user"></i></div>
+    </div>
+    <div class="line7"></div>
+    <div class="line8">
+        <div class="line8-icon"><i class="fa-regular fa-house"></i></div>
+        <div class="line8-icon"><i class="fa-regular fa-compass"></i></div>
+        <div class="line8-icon"><i class="fa-solid fa-film"></i></div>
+        <div class="line8-icon"><i class="fa-solid fa-plus"></i></div>
+        <div class="line8-icon"><i class="fa-solid fa-location-arrow"></i></div>
+        <div class="line8-icon"><i class="fa-solid fa-chart-simple"></i></div>
+        <div class="line8-icon"></div>
+    </div>
+</body>
+</html>
