@@ -49,8 +49,8 @@ body {
   }
 }
 
-body::before,
-body::after {
+.bg::before,
+.bg::after {
   content: "";
   position: absolute;
   inset: -50%;
@@ -60,12 +60,14 @@ body::after {
     rgba(255,255,255,0.15) 50%,
     rgba(255,255,255,0) 55%
   );
-  animation: glassSweep 7s linear infinite;
+  animation: glassSweep 6.5s  linear infinite ;
   pointer-events: none;
 }
 
-body::after {
+.bg::after {
   animation-delay: 8s; /* 👈 โผล่มากลางทาง */
+
+  
 }
 
 
@@ -119,34 +121,55 @@ body::after {
         .followbox {
             width: 37%;
             height: 35px;
-            background-color: rgb(22, 22, 14);
+            
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-             box-shadow: 3px 3px 30px #000;
+             box-shadow: 0px 3px 70px #000;
+             background: linear-gradient(
+    135deg,
+    #125188 0%,
+    #0f4c81 50%,
+    #1b6ca8 100%
+    
+  );
         }
 
         .messbox {
             width: 37%;
             height: 35px;
-           background-color: rgb(22, 22, 14);
+           
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
              box-shadow: 3px 3px 30px #000;
+             background: linear-gradient(
+    135deg,
+    #0b3c66 0%,
+    #0f4c81 50%,
+    #1b6ca8 100%
+    
+  );
         }
 
         .addbox {
             width: 10%;
             height: 35px;
-            background-color: rgb(22, 22, 14);
+            
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
              box-shadow: 3px 3px 30px #000;
+             background: linear-gradient(
+    135deg,
+    #0b3c66 0%,
+    #0f4c81 50%,
+    #1b6ca8 100%
+    
+  );
         }
 
         .line5 {
@@ -174,14 +197,14 @@ body::after {
   border-radius: 50%;
   padding: 3px;
   box-sizing: border-box;
-  margin: 0px 10px;
+  margin: 0px 2px;
 }
 
 /* วงเทาวิ่ง */
 .stoty-ring2.viewed::before {
   content: "";
   position: absolute;
-  inset: -1px;              /* แสงฟุ้งออกนอกวง */
+  inset: -7px;              /* แสงฟุ้งออกนอกวง */
   border-radius: 50%;
 
   background: conic-gradient(
@@ -274,7 +297,7 @@ body::after {
         .line8 {
             height: 50px;
             width: 100%;
-            
+           
            justify-content: space-around;
             position: fixed;
             bottom: 0;
@@ -489,7 +512,7 @@ body::after {
         </div>
     </div> 
     <div class="line3">
-        <pre><span id="vr">! モスバーガー <div class="verifed"></div>  <span id="she">  She/her</span></span><span id="pv">@pv.wannyxz_ 🔒</span>
+        <pre><span id="vr">コロンビーナ<div class="verifed"></div>  <span id="she">  She/her</span></span><span id="pv">@pv.wannyxz_ 🔒</span>
 Warehouse Unit Head 📦 ( informal )
 Mysterious Person 🕵️
 Introvert/ isfj 🫥
@@ -551,3 +574,4 @@ Do not disturb private areas
    </div>
 </body>
 </html>
+
